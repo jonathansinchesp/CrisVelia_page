@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrisVelia | Depilación Láser y Estética Avanzada en Quito</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Logo CrisVelia" class="logo float-animation">
+    </div>
+    <nav class="nav-menu">
+        <a href="index.html" class="active">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="precios.html">Precios</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="https://wa.me" target="_blank" class="btn-cta">Reservar Cita</a>
+    <a href="nosotros.html" class="btn-flotante-conocenos">Conócenos</a>
+    <button class="menu-toggle">☰</button>
+</header>
+
+<!-- SECCIÓN HERO (PORTADA OPTIMIZADA) -->
+<section id="inicio" class="hero-section">
+    <div class="hero-overlay">
+        <p class="hero-subtitle animate-hidden">CRISVELIA ECUADOR · ESTÉTICA AVANZADA</p>
+        <h1 class="hero-title animate-hidden">CRISVELIA · DEPILACIÓN LÁSER QUITO</h1>
+        <p class="hero-text animate-hidden">Tu espacio exclusivo de belleza, equilibrio y alta estética.<br>Diseñamos rituales de cuidado de la piel y bienestar corporal en Ciudad Bicentenario. Conecta con tu esencia gracias a nuestra tecnología avanzada y resultados clínicamente probados.</p>
+        <br>
+
+
+    </div>
+</section>
+
+<!-- ================= NUEVO MENÚ INTERACTIVO (INICIO) ================= -->
+<section class="interactive-cards-section">
+    <div class="section-header animate-hidden">
+        <p class="service-tag">DESCUBRE CRISVELIA</p>
+        <h2 class="section-title">Nuestros Pilares</h2>
+        <p class="section-subtitle">Conoce por qué somos el centro de referencia en Quito.</p>
+    </div>
+
+    <div class="cards-container">
+        <!-- Tarjeta 1 -->
+        <div class="interactive-card" onclick="toggleCard(this)">
+            <img src="assets/tecnologia.jpg" alt="Tecnología de Punta" class="card-bg">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <h3>Tecnología de Punta</h3>
+                <button class="btn-plus" aria-label="Ver más">+</button>
+            </div>
+            <div class="card-description">
+                <p>Contamos con el estándar de oro mundial: Candela GentleMax Pro. Nuestra tecnología Triple Onda se adapta a todo tipo de piel y garantiza resultados visibles desde la primera sesión.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="interactive-card" onclick="toggleCard(this)">
+            <img src="assets/rigor.jpg" alt="Rigor Clínico" class="card-bg">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <h3>Rigor Clínico</h3>
+                <button class="btn-plus" aria-label="Ver más">+</button>
+            </div>
+            <div class="card-description">
+                <p>Tu seguridad es nuestra prioridad. Equipos con certificación FDA y protocolos aplicados exclusivamente por especialistas certificadas. Procedimientos seguros, indoloros y sin cicatrices.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="interactive-card" onclick="toggleCard(this)">
+            <img src="assets/experiencia.jpg" alt="Experiencia CrisVelia" class="card-bg">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <h3>Experiencia CrisVelia</h3>
+                <button class="btn-plus" aria-label="Ver más">+</button>
+            </div>
+            <div class="card-description">
+                <p>Un espacio diseñado para tu relajación total. Combinamos el confort absoluto con la máxima eficacia dermatológica, brindándote una atención personalizada en un ambiente clínico-lujoso.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="interactive-card" onclick="toggleCard(this)">
+            <img src="assets/resultados.jpg" alt="Resultados Reales" class="card-bg">
+            <div class="card-overlay"></div>
+            <div class="card-content">
+                <h3>Resultados Reales</h3>
+                <button class="btn-plus" aria-label="Ver más">+</button>
+            </div>
+            <div class="card-description">
+                <p>Más de 17 años de experiencia y miles de pacientes satisfechas nos respaldan. Ofrecemos soluciones integrales con resultados reales y un acompañamiento profesional en cada paso.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SECCIÓN DE RESEÑAS Y CALIFICACIONES ================= -->
+<section id="resenas" class="reviews-section animate-hidden">
+    <div class="section-header">
+        <p class="service-tag">OPINIONES DE NUESTRAS PACIENTES</p>
+        <h2 class="section-title title-animated">Resultados que Generan Confianza</h2>
+        <p class="section-subtitle">Esto es lo que dicen quienes ya han vivido la Experiencia CrisVelia.</p>
+    </div>
+
+    <!-- Contenedor de Tarjetas de Reseñas -->
+    <div class="reviews-grid">
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"La atención en Ciudad Bicentenario es impecable. Los resultados de la depilación láser con la tecnología Candela se notan desde la primera sesión. ¡Súper recomendado!"</p>
+            <h4 class="review-author">- María José T.</h4>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">"Me realicé una limpieza facial profunda con espículas coreanas y mi piel dio un cambio radical. El ambiente es súper privado y muy relajante."</p>
+            <h4 class="review-author">- Camila S.</h4>
+        </div>
+    </div>
+
+    <!-- Botón Profesional para calificar -->
+    <div class="reviews-action">
+        <button class="btn-cta" onclick="openReviewModal()">Dejar una Reseña</button>
+    </div>
+</section>
+
+<!-- ================= MODAL DEL FORMULARIO DE CALIFICACIÓN ================= -->
+<div id="review-modal" class="modal-overlay" onclick="closeReviewModal()">
+    <div class="modal-box review-modal-box" onclick="event.stopPropagation()">
+        <button class="modal-close-top" onclick="closeReviewModal()">×</button>
+        <h3>Tu Opinión nos Importa</h3>
+        <p>Ayuda a más personas a conocer la calidad de nuestros tratamientos dermoestéticos.</p>
+
+        <form id="review-form" onsubmit="submitReview(event)">
+            <div class="form-group">
+                <label for="reviewer-name">Nombre Completo:</label>
+                <input type="text" id="reviewer-name" required placeholder="Ej. Alejandra Paz">
+            </div>
+
+            <div class="form-group">
+                <label>Tu Calificación:</label>
+                <div class="rating-stars-input">
+                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reviewer-text">Tu Reseña / Comentario:</label>
+                <textarea id="reviewer-text" rows="4" required placeholder="Cuéntanos tu experiencia con nuestros tratamientos o especialistas..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-cta text-upper">Enviar Calificación</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- SECCIÓN CTA + WHATSAPP -->
+<section class="cta-section">
+    <h2 class="cta-title animate-hidden">¿Cuál es el tratamiento ideal para ti?</h2>
+    <p class="cta-text animate-hidden">Agenda tu valoración gratuita y recibe un plan personalizado.</p>
+    <a href="https://wa.me" target="_blank" class="btn-whatsapp animate-hidden">
+        <i class="whatsapp-icon">💬</i> Consulta gratuita por WhatsApp
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <img src="assets/logo.png" alt="CrisVelia" class="footer-logo float-animation">
+            <p>El centro especializado en dermoestética y depilación láser de alta tecnología.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank">📷</a>
+                <a href="#" target="_blank">👍</a>
+                <a href="#" target="_blank">🎵</a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>SERVICIOS</h4>
+            <a href="servicios.html">Depilación Láser</a>
+            <a href="servicios.html">Tratamientos Faciales</a>
+            <a href="servicios.html">Ultherapy</a>
+            <a href="servicios.html">Estética Corporal</a>
+        </div>
+        <div class="footer-links">
+            <h4>INFORMACIÓN</h4>
+            <a href="precios.html">Lista de precios</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-contact">
+            <h4>CONTÁCTANOS</h4>
+            <p><strong>WhatsApp:</strong> +593 99 622 4871</p>
+            <p><strong>Dirección:</strong> CDLA Bicentenario, Calle de los Tilos y de las Rosas, Quito, Ecuador.</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 CrisVelia. Todos los derechos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 20px; color: var(--sage); text-align: center;">
+            Centro de estética · Servicio de depilación láser · Centro de cuidado de la piel
+        </p>
+    </div>
+</footer>
+
+<!-- Botón Flotante de WhatsApp -->
+<a href="https://wa.me" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://w3.org" viewBox="0 0 32 32" width="32" height="32" fill="#ffffff">
+        <path d="M16.004 0h-.008C7.174 0 0 7.174 0 16.004c0 2.822.738 5.58 2.138 8.006L.034 32l8.156-2.108c2.352 1.284 5.012 1.96 7.814 1.96h.008C24.83 31.852 32 24.678 32 15.848 32 7.018 24.83 0 16.004 0zm9.79 22.802c-.376 1.056-2.184 1.946-3.026 2.244-.774.274-1.75.374-2.706.304-1.112-.08-2.518-.308-4.554-1.044-5.628-2.042-9.454-7.192-9.994-8.134-.522-.926-2.224-3.058-2.224-5.646 0-2.59 1.33-3.758 1.796-4.258.472-.5 1.192-.606 1.552-.606.146 0 .272.002.388.008.34.012.524.026.764.026.426 0 .982-.132 1.552.566.464.566 1.806 2.198 1.806 2.198s.598.962.224 1.894c-.166.408-.48.886-.756 1.282-.206.296-.296.534-.166.816.484.952 1.244 1.832 2.242 2.702 1.27 1.126 2.546 1.686 3.114 1.944.284.132.574.062.768-.164l.984-1.16c.214-.258.432-.194.664-.134.582.164 2.044.72 2.39.894.346.172.59.31.666.494.08.186.08 1.064-.292 2.114z"/>
+    </svg>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
