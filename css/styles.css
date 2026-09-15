@@ -1242,5 +1242,86 @@ a {
 	color: var(--rose-gold);
 }
 
+/* =========================================
+   SECCIÓN DE PROMOCIONES (TARJETAS)
+   ========================================= */
+.promo-section {
+	background-color: var(--coconut-milk);
+	padding: 60px 10%;
+}
 
+.promo-category {
+	margin-bottom: 40px;
+}
+
+.promo-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 30px;
+	margin-top: 30px;
+}
+
+.promo-card {
+	background-color: var(--white);
+	border-radius: 12px;
+	padding: 35px 25px;
+	text-align: center;
+	box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+	border-top: 6px solid var(--rose-gold); /* Línea dorada superior */
+	position: relative;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(168, 139, 114, 0.2);
+}
+
+.promo-badge {
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--dark-text);
+	color: var(--white);
+	font-size: 0.75rem;
+	padding: 5px 15px;
+	border-radius: 20px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+.promo-card h3 {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 2rem;
+	color: var(--dark-text);
+	margin-bottom: 15px;
+}
+
+.promo-detail {
+	font-size: 0.95rem;
+	color: var(--sage);
+	margin-bottom: 20px;
+	min-height: 50px; /* Alinea los precios */
+}
+
+.promo-price {
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 3rem;
+	font-weight: 600;
+	color: var(--rose-gold);
+	margin-bottom: 25px;
+}
+
+.promo-card .btn-cta {
+	display: inline-block;
+	width: 100%;
+}
+
+/* Ajuste para el título de sección dentro de promociones */
+.promo-category .section-title {
+	font-size: 2.5rem;
+	margin-bottom: 5px;
+}
 
