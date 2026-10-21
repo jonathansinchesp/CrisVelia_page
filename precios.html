@@ -10,8 +10,99 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- Tu hoja de estilos -->
+  <!-- Hoja de estilos principal -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Fondo limpio de la sección */
+    .pricing-section {
+      background-color: #faf8f5;
+      padding: 50px 20px;
+    }
+
+    /* Tarjetas principales limpias y legibles */
+    .pricing-card {
+      background: #ffffff !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+      border: 1px solid rgba(212, 192, 169, 0.25);
+    }
+
+    /* Estilo para la tarjeta #12 de consulta personalizada */
+    .pricing-card.custom-card {
+      background: #f4ede4 !important;
+      border: 1px dashed #c0a485 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* =========================================================
+       BANNER TIPO HEADER CON LA IMAGEN AL FINAL DE DEPILACIÓN
+       ========================================================= */
+    .laser-closing-banner {
+      position: relative;
+      background: linear-gradient(rgba(20, 18, 15, 0.65), rgba(20, 18, 15, 0.65)),
+      url('assets/marca_agua.jpeg') center/cover no-repeat !important;
+      background-attachment: fixed !important; /* Efecto Parallax muy elegante */
+      color: #ffffff;
+      padding: 60px 25px;
+      margin: 60px 0 70px 0;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(212, 192, 169, 0.4);
+    }
+
+    .laser-closing-banner .banner-tag {
+      display: inline-block;
+      background-color: #c0a485;
+      color: #ffffff;
+      font-size: 0.75rem;
+      padding: 4px 14px;
+      border-radius: 15px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .laser-closing-banner h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: #ffffff !important;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .laser-closing-banner p {
+      font-size: 1rem;
+      color: #f0f0f0 !important;
+      max-width: 680px;
+      margin: 0 auto 25px auto;
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    .laser-closing-banner .btn-banner {
+      display: inline-block;
+      background-color: #c0a485;
+      color: #ffffff !important;
+      padding: 12px 32px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    .laser-closing-banner .btn-banner:hover {
+      background-color: #a88d6f;
+      transform: translateY(-2px);
+    }
+  </style>
 </head>
 <body>
 
@@ -28,13 +119,13 @@
     <a href="promociones.html">Promociones</a>
     <a href="contacto.html">Contacto</a>
   </nav>
-  <a href="https://w.app/crisvelia" target="_blank" class="btn-cta">Reservar Cita</a>
+  <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20una%20cita%20en%20CrisVelia." target="_blank" class="btn-cta">Reservar Cita</a>
   <a href="nosotros.html" class="btn-flotante-conocenos">Conócenos</a>
 
   <button class="menu-toggle">☰</button>
 </header>
 
-<!-- ================= ENCABEZADO DE LA PÁGINA (Hero) ================= -->
+<!-- ================= ENCABEZADO DE LA PÁGINA (HERO ORIGINAL) ================= -->
 <section class="page-hero">
   <h1 class="animate-hidden">Nuestra Lista de Precios</h1>
   <p class="animate-hidden">Elige tu paquete ideal con tecnología multiláser 4D.</p>
@@ -55,82 +146,98 @@
       <h3>Axilas</h3>
       <p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en bigote</p>
       <div class="price">$85</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20para%20Axilas%20($85)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Brasilero</h3>
       <p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en axilas</p>
       <div class="price">$96</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Brasilero%20($96)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Medio Brazo</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$99</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Medio%20Brazo%20($99)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Brazo Completo</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$150</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Brazo%20Completo%20($150)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Abdomen</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$96</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Abdomen%20($96)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Pecho</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$96</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Pecho%20($96)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Abdomen y Pecho</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$160</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Abdomen%20y%20Pecho%20($160)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Mini Zona</h3>
       <p class="pricing-detail">Patillas, bigote, línea alba, línea interglútea, manos o pies (8 sesiones)</p>
       <div class="price">$70</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Mini%20Zona%20($70)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Muslos</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$150</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Muslos%20($150)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Canillas</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$150</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Canillas%20($150)." target="_blank" class="btn-small">Reservar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Espalda Alta</h3>
       <p class="pricing-detail">8 Sesiones</p>
       <div class="price">$90</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Reservar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Espalda%20Alta%20($90)." target="_blank" class="btn-small">Reservar</a>
+    </div>
+
+    <!-- TARJETA 12: CONSULTA PERSONALIZADA PARA COMPLETAR LA GRILLA -->
+    <div class="pricing-card custom-card animate-hidden">
+      <h3>¿Buscas otra zona?</h3>
+      <p class="pricing-detail">Diseñamos un paquete personalizado según tus necesidades particulares.</p>
+      <div class="price">A Medida</div>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20por%20un%20paquete%20de%20depilación%20láser%20personalizado." target="_blank" class="btn-small">Consultar</a>
     </div>
   </div>
 
+  <!-- ================= BANNER HEADER AL FINAL DE DEPILACIÓN LÁSER ================= -->
+  <div class="laser-closing-banner animate-hidden">
+    <span class="banner-tag">Tecnología Médica Multiláser</span>
+    <h3>Resultados Visibles desde la 1ª Sesión</h3>
+    <p>Utilizamos tecnología de triple onda de alta precisión para un tratamiento rápido, indoloro y seguro para todo tipo de piel.</p>
+    <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20agendar%20una%20citas%20de%20valoración%20gratuita." target="_blank" class="btn-banner">Agendar Valoración Gratis</a>
+  </div>
+
   <!-- 2. TRATAMIENTOS FACIALES AVANZADOS -->
-  <div class="section-header animate-hidden" style="margin-top: 80px;">
+  <div class="section-header animate-hidden">
     <p class="service-tag">RENOVACIÓN CELULAR · LUMINOSIDAD</p>
     <h2 class="section-title">Tratamientos Faciales Avanzados</h2>
     <p class="section-subtitle">Protocolos de alta gama para el cuidado de tu piel</p>
@@ -141,43 +248,36 @@
       <h3>Limpieza Facial Profunda</h3>
       <p class="pricing-detail">Productos coreanos y españoles. Mejora textura y luminosidad.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20Limpieza%20Facial%20Profunda." target="_blank" class="btn-small">Consultar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Espículas Coreanas</h3>
       <p class="pricing-detail">Favorece la renovación celular, poros y marcas postacné.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20tratamiento%20con%20Espículas%20Coreanas." target="_blank" class="btn-small">Consultar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>CO2 Coreano</h3>
       <p class="pricing-detail">Carboxy sin agujas. Luminosidad, hidratación y textura.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20tratamiento%20CO2%20Coreano." target="_blank" class="btn-small">Consultar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Tratamiento con Exosomas</h3>
       <p class="pricing-detail">Ideal para líneas finas, opacidad y signos de envejecimiento.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20del%20Tratamiento%20con%20Exosomas." target="_blank" class="btn-small">Consultar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Ultherapy Facial</h3>
       <p class="pricing-detail">Mejora flacidez, define óvalo facial, papada, cuello y escote.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20Ultherapy%20Facial." target="_blank" class="btn-small">Consultar</a>
     </div>
-
-  <div class="pricing-card animate-hidden">
-    <h3>Ultherapy Corporal</h3>
-    <p class="pricing-detail">Mejora flacidez, define óvalo facial, papada, cuello y escote.</p>
-    <div class="price">Consultar</div>
-    <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
-  </div>
   </div>
 
   <!-- 3. TRATAMIENTOS CORPORALES & MOLDEADORES -->
@@ -192,38 +292,16 @@
       <h3>Ultherapy Corporal</h3>
       <p class="pricing-detail">Grasa localizada (abdomen, flancos, brazos, espalda, muslos) y firmeza.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20Ultherapy%20Corporal." target="_blank" class="btn-small">Consultar</a>
     </div>
 
     <div class="pricing-card animate-hidden">
       <h3>Masajes Reductores</h3>
       <p class="pricing-detail">Masajes reductores y moldeadores personalizados.</p>
       <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
-    </div>
-
-    <div class="pricing-card animate-hidden">
-      <h3>Cavitador + Radiofrecuencia</h3>
-      <p class="pricing-detail">Reducción de medidas y firmeza en zonas específicas.</p>
-      <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
-    </div>
-
-    <div class="pricing-card animate-hidden">
-      <h3>Vacum + Maderoterapia</h3>
-      <p class="pricing-detail">Moldeamiento de contorno y mejora de la circulación.</p>
-      <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
-    </div>
-
-    <div class="pricing-card animate-hidden">
-      <h3>Ultrasonido + Lipolaser</h3>
-      <p class="pricing-detail">Definición de contorno corporal y eliminación de grasa localizada.</p>
-      <div class="price">Consultar</div>
-      <a href="https://w.app/crisvelia" target="_blank" class="btn-small">Consultar</a>
+      <a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20el%20precio%20de%20los%20Masajes%20Reductores." target="_blank" class="btn-small">Consultar</a>
     </div>
   </div>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -261,8 +339,8 @@
   </div>
 </footer>
 
-<!-- Botón flotante -->
-<a href="https://w.app/crisvelia" target="_blank" class="whatsapp-float">
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/593996224871?text=Hola,%20estoy%20viendo%20la%20lista%20de%20precios%20y%20me%20gustaría%20más%20información." target="_blank" class="whatsapp-float">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="#ffffff">
     <path d="M16.004 0h-.008C7.174 0 0 7.174 0 16.004c0 2.822.738 5.58 2.138 8.006L.034 32l8.156-2.108c2.352 1.284 5.012 1.96 7.814 1.96h.008C24.83 31.852 32 24.678 32 15.848 32 7.018 24.83 0 16.004 0zm9.79 22.802c-.376 1.056-2.184 1.946-3.026 2.244-.774.274-1.75.374-2.706.304-1.112-.08-2.518-.308-4.554-1.044-5.628-2.042-9.454-7.192-9.994-8.134-.522-.926-2.224-3.058-2.224-5.646 0-2.59 1.33-3.758 1.796-4.258.472-.5 1.192-.606 1.552-.606.146 0 .272.002.388.008.34.012.524.026.764.026.426 0 .982-.132 1.552.566.464.566 1.806 2.198 1.806 2.198s.598.962.224 1.894c-.166.408-.48.886-.756 1.282-.206.296-.296.534-.166.816.484.952 1.244 1.832 2.242 2.702 1.27 1.126 2.546 1.686 3.114 1.944.284.132.574.062.768-.164l.984-1.16c.214-.258.432-.194.664-.134.582.164 2.044.72 2.39.894.346.172.59.31.666.494.08.186.08 1.064-.292 2.114z"/>
   </svg>
