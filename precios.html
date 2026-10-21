@@ -142,7 +142,7 @@
   </div>
 
   <div class="pricing-grid" id="grid-depilacion">
-    <!-- Contenido estático de respaldo (Se reemplaza si Sheets responde correctamente) -->
+    <!-- Respaldo Estático Inicial (Garantiza que nunca aparezca en blanco) -->
     <div class="pricing-card"><h3>Axilas</h3><p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en bigote</p><div class="price">$85</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20para%20Axilas%20($85)." target="_blank" class="btn-small">Reservar</a></div>
     <div class="pricing-card"><h3>Brasilero</h3><p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en axilas</p><div class="price">$96</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Brasilero%20($96)." target="_blank" class="btn-small">Reservar</a></div>
     <div class="pricing-card"><h3>Medio Brazo</h3><p class="pricing-detail">8 Sesiones</p><div class="price">$99</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Medio%20Brazo%20($99)." target="_blank" class="btn-small">Reservar</a></div>
@@ -237,7 +237,7 @@
 
 <script src="js/script.js"></script>
 
-<!-- ================= SCRIPT INTELIGENTE CON RESPALDO ================= -->
+<!-- ================= SCRIPT SEGURO ================= -->
 <script>
   const RAW_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQBmh18QMVvx1sutFOMIuWxKpz-oCN5TgbVHSkz-kMnzuwBTPXouoZ-CUFsVn8yaaR6pLyXZ8eRdv3X/pub?output=csv';
   const PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(RAW_CSV_URL);
@@ -268,21 +268,17 @@
 
   async function cargarPreciosDesdeSheets() {
     try {
-      let response = await fetch(PROXY_URL);
-      if (!response.ok) throw new Error('Proxy falló');
+      const response = await fetch(PROXY_URL);
+      if (!response.ok) return; // Mantiene el HTML estático si hay error
 
       const csvData = await response.text();
       const rows = parseCSV(csvData);
 
-      if (rows.length === 0) return; // Si está vacío, mantiene el respaldo HTML estático
+      if (rows.length === 0) return;
 
-      const gridDepilacion = document.getElementById('grid-depilacion');
-      const gridFacial = document.getElementById('grid-facial');
-      const gridCorporal = document.getElementById('grid-corporal');
-
-      gridDepilacion.innerHTML = '';
-      gridFacial.innerHTML = '';
-      gridCorporal.innerHTML = '';
+      let htmlDepilacion = '';
+      let htmlFacial = '';
+      let htmlCorporal = '';
 
       rows.forEach(col => {
         const categoria = col[0] ? col[0].toLowerCase() : '';
@@ -317,15 +313,21 @@
         }
 
         if (categoria === 'depilacion') {
-          gridDepilacion.innerHTML += cardHTML;
+          htmlDepilacion += cardHTML;
         } else if (categoria === 'facial') {
-          gridFacial.innerHTML += cardHTML;
+          htmlFacial += cardHTML;
         } else if (categoria === 'corporal') {
-          gridCorporal.innerHTML += cardHTML;
+          htmlCorporal += cardHTML;
         }
       });
+
+      // Solo reemplaza el contenido si Google Sheets trajo datos exitosamente
+      if (htmlDepilacion) document.getElementById('grid-depilacion').innerHTML = htmlDepilacion;
+      if (htmlFacial) document.getElementById('grid-facial').innerHTML = htmlFacial;
+      if (htmlCorporal) document.getElementById('grid-corporal').innerHTML = htmlCorporal;
+
     } catch (error) {
-      console.warn('No se pudo conectar con Google Sheets en local, mostrando valores estáticos de respaldo:', error);
+      console.log('Usando respaldo local estático por seguridad.');
     }
   }
 
