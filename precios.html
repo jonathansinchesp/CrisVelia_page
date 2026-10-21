@@ -125,7 +125,7 @@
   <button class="menu-toggle">☰</button>
 </header>
 
-<!-- ================= ENCABEZADO DE LA PÁGINA (HERO ORIGINAL) ================= -->
+<!-- ================= ENCABEZADO DE LA PÁGINA ================= -->
 <section class="page-hero">
   <h1 class="animate-hidden">Nuestra Lista de Precios</h1>
   <p class="animate-hidden">Elige tu paquete ideal con tecnología multiláser 4D.</p>
@@ -142,7 +142,7 @@
   </div>
 
   <div class="pricing-grid" id="grid-depilacion">
-    <!-- Respaldo Estático Inicial (Garantiza que nunca aparezca en blanco) -->
+    <!-- Respaldo Estático Inicial -->
     <div class="pricing-card"><h3>Axilas</h3><p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en bigote</p><div class="price">$85</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20para%20Axilas%20($85)." target="_blank" class="btn-small">Reservar</a></div>
     <div class="pricing-card"><h3>Brasilero</h3><p class="pricing-detail">8 Sesiones + 2 sesiones de cortesía en axilas</p><div class="price">$96</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Brasilero%20($96)." target="_blank" class="btn-small">Reservar</a></div>
     <div class="pricing-card"><h3>Medio Brazo</h3><p class="pricing-detail">8 Sesiones</p><div class="price">$99</div><a href="https://wa.me/593996224871?text=Hola,%20deseo%20reservar%20el%20paquete%20de%20Depilación%20Láser%20Medio%20Brazo%20($99)." target="_blank" class="btn-small">Reservar</a></div>
@@ -237,10 +237,10 @@
 
 <script src="js/script.js"></script>
 
-<!-- ================= SCRIPT SEGURO ================= -->
+<!-- ================= SCRIPT DIRECTO API GOOGLE SHEETS ================= -->
 <script>
-  const RAW_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQBmh18QMVvx1sutFOMIuWxKpz-oCN5TgbVHSkz-kMnzuwBTPXouoZ-CUFsVn8yaaR6pLyXZ8eRdv3X/pub?output=csv';
-  const PROXY_URL = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(RAW_CSV_URL);
+  // Exportación directa sin pasar por el módulo restringido de publicación web
+  const GOOGLE_EXPORT_URL = 'https://docs.google.com/spreadsheets/d/1VmG64oYfeB_9qsb8voXIww6IP0w9W9yCCLFiR8ag0pU/export?format=csv&t=' + Date.now();
 
   function parseCSV(text) {
     const lines = text.trim().split('\n');
@@ -268,25 +268,25 @@
 
   async function cargarPreciosDesdeSheets() {
     try {
-      const response = await fetch(PROXY_URL);
-      if (!response.ok) return; // Mantiene el HTML estático si hay error
+      const response = await fetch(GOOGLE_EXPORT_URL);
+      if (!response.ok) return;
 
       const csvData = await response.text();
       const rows = parseCSV(csvData);
 
-      if (rows.length === 0) return;
+      if (!rows || rows.length === 0) return;
 
       let htmlDepilacion = '';
       let htmlFacial = '';
       let htmlCorporal = '';
 
       rows.forEach(col => {
-        const categoria = col[0] ? col[0].toLowerCase() : '';
+        const categoria = col[0] ? col[0].toLowerCase().trim() : '';
         const titulo = col[1] || '';
         const detalle = col[2] || '';
         const precio = col[3] || '';
         const mensajeWa = col[4] || '';
-        const esCustom = col[5] ? col[5].toUpperCase() : 'NO';
+        const esCustom = col[5] ? col[5].toUpperCase().trim() : 'NO';
 
         const linkWhatsApp = `https://wa.me/593996224871?text=${encodeURIComponent(mensajeWa)}`;
         const textoBoton = (precio.toLowerCase() === 'consultar' || esCustom === 'SI') ? 'Consultar' : 'Reservar';
@@ -321,13 +321,12 @@
         }
       });
 
-      // Solo reemplaza el contenido si Google Sheets trajo datos exitosamente
       if (htmlDepilacion) document.getElementById('grid-depilacion').innerHTML = htmlDepilacion;
       if (htmlFacial) document.getElementById('grid-facial').innerHTML = htmlFacial;
       if (htmlCorporal) document.getElementById('grid-corporal').innerHTML = htmlCorporal;
 
     } catch (error) {
-      console.log('Usando respaldo local estático por seguridad.');
+      console.log('Usando respaldo local estático por seguridad:', error);
     }
   }
 
