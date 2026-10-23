@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CrisVelia | Depilación Láser y Estética Avanzada en Quito</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://googleapis.com" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
 
@@ -34,12 +34,10 @@
         <h1 class="hero-title animate-hidden">CRISVELIA · DEPILACIÓN LÁSER QUITO</h1>
         <p class="hero-text animate-hidden">Tu espacio exclusivo de belleza, equilibrio y alta estética.<br>Diseñamos tratamientos de cuidado de la piel y bienestar corporal en el Norte de Quito. Conecta con tu esencia gracias a nuestra tecnología avanzada y resultados comprobados.</p>
         <br>
-
-
     </div>
 </section>
 
-<!-- ================= NUEVO MENÚ INTERACTIVO (INICIO) ================= -->
+<!-- ================= MENÚ INTERACTIVO (INICIO) ================= -->
 <section class="interactive-cards-section">
     <div class="section-header animate-hidden">
         <p class="service-tag">DESCUBRE CRISVELIA</p>
@@ -114,65 +112,28 @@
     <div class="reviews-grid">
         <div class="review-card">
             <div class="stars">★★★★★</div>
-            <p class="review-text">"La atención en Ciudad Bicentenario es impecable. Los resultados de la depilación láser con la tecnología Candela se notan desde la primera sesión. ¡Súper recomendado!"</p>
-            -             <h4 class="review-author">María José T.
-        </h4>
+            <p class="review-text">"La atención en Ciudad Bicentenario es impecable. Los resultados de la depilación láser se notan desde la primera sesión. ¡Súper recomendado!"</p>
+            <h4 class="review-author">María José T.</h4>
         </div>
 
         <div class="review-card">
             <div class="stars">★★★★★</div>
             <p class="review-text">"Me realicé una limpieza facial profunda con espículas coreanas y mi piel dio un cambio radical. El ambiente es súper privado y muy relajante."</p>
-            -             <h4 class="review-author">Camila S.
-        </h4>
+            <h4 class="review-author">Camila S.</h4>
         </div>
     </div>
 
-    <!-- Botón Profesional para calificar -->
+    <!-- Botón directo a WhatsApp para dejar reseña -->
     <div class="reviews-action">
-        <button class="btn-cta" onclick="openReviewModal()">Dejar una Reseña</button>
+        <a href="https://wa.me/593996224871?text=Hola%20CrisVelia,%20me%20gustar%C3%ADa%20dejar%20una%20rese%C3%B1a%20y%20comentario%20sobre%20mi%20experiencia%20en%20sus%20tratamientos..." target="_blank" class="btn-cta text-upper">Dejar una Reseña</a>
     </div>
 </section>
-
-<!-- ================= MODAL DEL FORMULARIO DE CALIFICACIÓN ================= -->
-<div id="review-modal" class="modal-overlay" onclick="closeReviewModal()">
-    <div class="modal-box review-modal-box" onclick="event.stopPropagation()">
-        <button class="modal-close-top" onclick="closeReviewModal()">×</button>
-        <h3>Tu Opinión nos Importa</h3>
-        <p>Ayuda a más personas a conocer la calidad de nuestros tratamientos dermoestéticos.</p>
-
-        <form id="review-form" onsubmit="submitReview(event)">
-            <div class="form-group">
-                <label for="reviewer-name">Nombre Completo:</label>
-                <input type="text" id="reviewer-name" required placeholder="Ej. Alejandra Paz">
-            </div>
-
-            <div class="form-group">
-                <label>Tu Calificación:</label>
-                <div class="rating-stars-input">
-                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">★</label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label for="reviewer-text">Tu Reseña / Comentario:</label>
-                <textarea id="reviewer-text" rows="4" required placeholder="Cuéntanos tu experiencia con nuestros tratamientos o especialistas..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-cta text-upper">Enviar Calificación</button>
-        </form>
-    </div>
-</div>
-
 
 <!-- SECCIÓN CTA + WHATSAPP -->
 <section class="cta-section">
     <h2 class="cta-title animate-hidden">¿Cuál es el tratamiento ideal para ti?</h2>
     <p class="cta-text animate-hidden">Agenda tu valoración gratuita y recibe un plan personalizado.</p>
-    <a href="https://wa.me/593996224871?text=Hola,%20deseo%20una%20consulta%20gratuita%20y%20conocer%20el%20tratamiento%20ideal%20para%20mí." target="_blank" class="btn-whatsapp animate-hidden">
+    <a href="https://wa.me/593996224871?text=Hola,%20deseo%20una%20consulta%20gratuita%20y%20conocer%20el%20tratamiento%20ideal%20para%20m%C3%AD." target="_blank" class="btn-whatsapp animate-hidden">
         <i class="whatsapp-icon">💬</i> Consulta gratuita por WhatsApp
     </a>
 </section>
@@ -183,11 +144,6 @@
         <div class="footer-brand">
             <img src="assets/logo.png" alt="CrisVelia" class="footer-logo float-animation">
             <p>El centro especializado en cosmetológica y depilación láser de alta tecnología.</p>
-            <div class="social-icons">
-                <a href="#" target="_blank"></a>
-                <a href="#" target="_blank"></a>
-                <a href="#" target="_blank"></a>
-            </div>
         </div>
         <div class="footer-links">
             <h4>SERVICIOS</h4>
@@ -217,8 +173,8 @@
 </footer>
 
 <!-- Botón Flotante de WhatsApp -->
-<a href="https://wa.me/593996224871?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
-    <svg xmlns="http://w3.org" viewBox="0 0 32 32" width="32" height="32" fill="#ffffff">
+<a href="https://wa.me/593996224871?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="#ffffff">
         <path d="M16.004 0h-.008C7.174 0 0 7.174 0 16.004c0 2.822.738 5.58 2.138 8.006L.034 32l8.156-2.108c2.352 1.284 5.012 1.96 7.814 1.96h.008C24.83 31.852 32 24.678 32 15.848 32 7.018 24.83 0 16.004 0zm9.79 22.802c-.376 1.056-2.184 1.946-3.026 2.244-.774.274-1.75.374-2.706.304-1.112-.08-2.518-.308-4.554-1.044-5.628-2.042-9.454-7.192-9.994-8.134-.522-.926-2.224-3.058-2.224-5.646 0-2.59 1.33-3.758 1.796-4.258.472-.5 1.192-.606 1.552-.606.146 0 .272.002.388.008.34.012.524.026.764.026.426 0 .982-.132 1.552.566.464.566 1.806 2.198 1.806 2.198s.598.962.224 1.894c-.166.408-.48.886-.756 1.282-.206.296-.296.534-.166.816.484.952 1.244 1.832 2.242 2.702 1.27 1.126 2.546 1.686 3.114 1.944.284.132.574.062.768-.164l.984-1.16c.214-.258.432-.194.664-.134.582.164 2.044.72 2.39.894.346.172.59.31.666.494.08.186.08 1.064-.292 2.114z"/>
     </svg>
 </a>
@@ -226,5 +182,3 @@
 <script src="js/script.js"></script>
 </body>
 </html>
-
-```

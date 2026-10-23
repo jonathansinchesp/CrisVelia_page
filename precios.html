@@ -14,30 +14,89 @@
   <link rel="stylesheet" href="css/styles.css">
 
   <style>
-    /* Fondo limpio de la sección */
+    /* Fondo general de la página */
     .pricing-section {
       background-color: #faf8f5;
       padding: 50px 20px;
     }
 
-    /* Tarjetas principales limpias y legibles */
+    /* =========================================================
+       1. ESTILOS BASE DE TODAS LAS TARJETAS (Borde Discontinuo)
+       ========================================================= */
     .pricing-card {
-      background: #ffffff !important;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-      border: 1px solid rgba(212, 192, 169, 0.25);
-    }
-
-    /* Estilo para la tarjeta custom/personalizada */
-    .pricing-card.custom-card {
-      background: #f4ede4 !important;
-      border: 1px dashed #c0a485 !important;
+      border: 1px dashed #d8c8b8;
+      border-radius: 12px;
+      padding: 25px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Tarjeta Especial Custom ("¿Buscas otra zona?") */
+    .pricing-card.custom-card {
+      background: #ebdccb !important;
+      border: 1px dashed #a88a68 !important;
+      border-top: 3px solid #8f6e4a !important;
     }
 
     /* =========================================================
-       BANNER TIPO HEADER CON LA IMAGEN AL FINAL DE DEPILACIÓN
+       2. DIFERENCIACIÓN VISUAL MÁS NOTABLE POR SECCIONES
+       ========================================================= */
+
+    /* SECCIÓN 1: DEPILACIÓN LÁSER (Warm Beige Asentado) */
+    #grid-depilacion .pricing-card:not(.custom-card) {
+      background: #f7ede2 !important;
+      border-color: #d2bba0 !important;
+      border-top: 3px solid #b89774 !important;
+    }
+    .tag-depilacion {
+      background-color: #e0cca8;
+      color: #523f2f !important;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    /* SECCIÓN 2: TRATAMIENTOS FACIALES (Sage / Verde Botánico Asentado) */
+    #grid-facial .pricing-card {
+      background: #EBE0CA !important;
+      border-color: #aebfb3 !important;
+      border-top: 3px solid #7d9b85 !important;
+    }
+    .tag-facial {
+      background-color: #c5d6c9;
+      color: #314236 !important;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    /* SECCIÓN 3: TRATAMIENTOS CORPORALES (Coconut Milk / Crema Cálido) */
+    #grid-corporal .pricing-card {
+      background: #f2ebd9 !important;
+      border-color: #cfc2a9 !important;
+      border-top: 3px solid #ab9875 !important;
+    }
+    .tag-corporal {
+      background-color: #dcd0b3;
+      color: #423826 !important;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    /* =========================================================
+       3. BANNER CIERRE DEPILACIÓN CON MARCA DE AGUA
        ========================================================= */
     .laser-closing-banner {
       position: relative;
@@ -136,7 +195,7 @@
 
   <!-- 1. DEPILACIÓN LÁSER -->
   <div class="section-header animate-hidden">
-    <p class="service-tag">TECNOLOGÍA TRIPLE ONDA · 755nm + 808nm + 1064nm</p>
+    <p class="service-tag tag-depilacion">TECNOLOGÍA TRIPLE ONDA · 755nm + 808nm + 1064nm</p>
     <h2 class="section-title">Depilación Láser Permanente</h2>
     <p class="section-subtitle">Paquetes de 8 sesiones con cortesías especiales</p>
   </div>
@@ -157,7 +216,7 @@
     <div class="pricing-card custom-card"><h3>¿Buscas otra zona?</h3><p class="pricing-detail">Diseñamos un paquete personalizado según tus necesidades particulares.</p><div class="price">A Medida</div><a href="https://wa.me/593996224871?text=Hola,%20quisiera%20consultar%20por%20un%20paquete%20de%20depilación%20láser%20personalizado." target="_blank" class="btn-small">Consultar</a></div>
   </div>
 
-  <!-- ================= BANNER HEADER AL FINAL DE DEPILACIÓN LÁSER ================= -->
+  <!-- ================= BANNER DE CIERRE DEPILACIÓN ================= -->
   <div class="laser-closing-banner animate-hidden">
     <span class="banner-tag">Tecnología Médica Multiláser</span>
     <h3>Resultados Visibles desde la 1ª Sesión</h3>
@@ -167,7 +226,7 @@
 
   <!-- 2. TRATAMIENTOS FACIALES AVANZADOS -->
   <div class="section-header animate-hidden">
-    <p class="service-tag">RENOVACIÓN CELULAR · LUMINOSIDAD</p>
+    <p class="service-tag tag-facial">RENOVACIÓN CELULAR · LUMINOSIDAD</p>
     <h2 class="section-title">Tratamientos Faciales Avanzados</h2>
     <p class="section-subtitle">Protocolos de alta gama para el cuidado de tu piel</p>
   </div>
@@ -182,7 +241,7 @@
 
   <!-- 3. TRATAMIENTOS CORPORALES & MOLDEADORES -->
   <div class="section-header animate-hidden" style="margin-top: 80px;">
-    <p class="service-tag">REDUCCIÓN DE MEDIDAS · FIRMEZA</p>
+    <p class="service-tag tag-corporal">REDUCCIÓN DE MEDIDAS · FIRMEZA</p>
     <h2 class="section-title">Tratamientos Corporales & Moldeadores</h2>
     <p class="section-subtitle">Tecnología y masajes para moldear tu figura</p>
   </div>
@@ -239,7 +298,6 @@
 
 <!-- ================= SCRIPT DIRECTO API GOOGLE SHEETS ================= -->
 <script>
-  // Exportación directa sin pasar por el módulo restringido de publicación web
   const GOOGLE_EXPORT_URL = 'https://docs.google.com/spreadsheets/d/1VmG64oYfeB_9qsb8voXIww6IP0w9W9yCCLFiR8ag0pU/export?format=csv&t=' + Date.now();
 
   function parseCSV(text) {

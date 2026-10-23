@@ -8,17 +8,24 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 
     <style>
-		/* Estilos adaptados para tarjetas promocionales con Insignia/Badge */
+		/* Estilos adaptados para tarjetas promocionales con borde sutil y elegante */
 		.promo-card {
 			position: relative;
 			background: #ffffff !important;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-			border: 1px solid rgba(212, 192, 169, 0.25);
+			border: 1px dashed #d8c8b8 !important;
 			border-radius: 12px;
 			padding: 25px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+			transition: all 0.3s ease;
+		}
+
+		.promo-card:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+			border-color: #c0a485 !important;
 		}
 
 		.promo-badge {
